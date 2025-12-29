@@ -4,10 +4,16 @@ export default function Layout({ children }) {
       {/* Sidebar */}
       <aside className="w-64 bg-gray-900 text-white flex flex-col">
         <div className="px-6 py-5 border-b">Logo</div>
-        <nav className="flex-1 px-6 py-5 space-y-2">
-          <div>Dashboard</div>
-          <div>Users</div>
-          <div>Settings</div>
+        <nav className="flex-1 flex flex-col px-6 py-4 gap-2">
+          <a href="#" className="px-3 py-2 rounded block">
+            Dashboard
+          </a>
+          <a href="#" className="px-3 py-2 rounded block">
+            Users
+          </a>
+          <a href="#" className="px-3 py-2 rounded block">
+            Settings
+          </a>
         </nav>
         <footer className="px-6 py-5 border-t">Footer</footer>
       </aside>
