@@ -2,11 +2,19 @@ import { useState } from "react";
 
 export default function Layout({ children }) {
   const [currentpage, setCurrentpage] = useState("dashboard");
+  const [isSidebaropen, setIsSidebaropen] = useState(false);
 
   return (
     <div className="min-h-screen flex bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-900 text-white flex flex-col">
+      <aside
+        className={`
+                    fixed inset-y-0 left-0 z-40 w-64 bg-gray-900 text-white
+    transform transition-transform duration-200
+    -translate-x-full md:translate-x-0
+    ${isSidebaropen ? "translate-x-0" : ""}
+  `}
+      >
         <div className="px-6 py-5 border-b">Logo</div>
         <nav className="flex-1 flex flex-col px-6 py-4 gap-2">
           <a
