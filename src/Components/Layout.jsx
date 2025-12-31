@@ -2,9 +2,8 @@ import { useState } from "react";
 
 export default function Layout({ children }) {
   const [currentpage, setCurrentpage] = useState("dashboard");
-  const [isSidebaropen, setIsSidebaropen] = useState(true);
+  const [isSidebaropen, setIsSidebaropen] = useState(false);
 
-  return (
     <div className="min-h-screen flex bg-gray-100">
       {/* Sidebar */}
       <aside
