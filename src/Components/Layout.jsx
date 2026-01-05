@@ -46,36 +46,6 @@ export default function Layout() {
         </nav>
 
         {/* =========================================================== */}
-        {/* <nav className="flex-1 flex flex-col px-6 py-4 gap-2">
-          <button
-            onClick={() => setCurrentPage("dashboard")}
-            className={`text-left px-3 py-2 rounded block  ${
-              currentPage === "dashboard" ? "font-semibold" : ""
-            }`}
-          >
-            Dashboard
-          </button>
-
-          <button
-            onClick={() => {
-              setCurrentPage("user");
-            }}
-            className={`text-left px-3 py-2 rounded  block ${
-              currentPage === "user" ? "font-semibold" : ""
-            }`}
-          >
-            Users
-          </button>
-
-          <button
-            onClick={() => setCurrentPage("settings")}
-            className={`text-left px-3 py-2 rounded block  ${
-              currentPage === "settings" ? "font-semibold" : ""
-            }`}
-          >
-            Settings
-          </button>
-        </nav> */}
 
         <footer className="px-6 py-5 border-t">Footer</footer>
       </aside>
