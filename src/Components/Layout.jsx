@@ -1,16 +1,52 @@
-import { useState } from "react";
 import Dashboard from "../Pages/Dashboard";
+import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
-  const [currentPage, setCurrentPage] = useState("dashboard");
-
   return (
     <div className="min-h-screen flex bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-900 text-white flex flex-col">
         <div className="px-6 py-5 border-b">Logo</div>
+        {/* =========================================================== */}
 
         <nav className="flex-1 flex flex-col px-6 py-4 gap-2">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `px-3 py-2 rounded block ${
+                isActive ? "font-semibold border" : ""
+              }`
+            }
+          >
+            Dashboard
+          </NavLink>
+
+          <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded block ${
+                isActive ? "font-semibold border" : ""
+              }`
+            }
+          >
+            Users
+          </NavLink>
+
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded block ${
+                isActive ? "font-semibold border" : ""
+              }`
+            }
+          >
+            Settings
+          </NavLink>
+        </nav>
+
+        {/* =========================================================== */}
+        {/* <nav className="flex-1 flex flex-col px-6 py-4 gap-2">
           <button
             onClick={() => setCurrentPage("dashboard")}
             className={`text-left px-3 py-2 rounded block  ${
@@ -39,7 +75,7 @@ export default function Layout() {
           >
             Settings
           </button>
-        </nav>
+        </nav> */}
 
         <footer className="px-6 py-5 border-t">Footer</footer>
       </aside>
@@ -51,9 +87,7 @@ export default function Layout() {
 
         {/* Page Content */}
         <main className="flex-1 p-6">
-          {currentPage === "dashboard" && <h1>Dash-board Page is here!</h1>}
-          {currentPage === "user" && <h1>User Page is here!</h1>}
-          {currentPage === "settings" && <h1>Setting is here!</h1>}
+          <Outlet />
         </main>
       </div>
     </div>
