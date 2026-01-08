@@ -1,10 +1,19 @@
-import Dashboard from "../Pages/Dashboard";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex bg-gray-100">
       {/* Sidebar */}
+
+      {isSidebarOpen && (
+        <div
+          onClick={() => setIsSidebarOpen(false)}
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
+        />
+      )}
+
       <aside className="w-64 bg-gray-900 text-white flex flex-col">
         <div className="px-6 py-5 border-b">Logo</div>
         {/* =========================================================== */}
