@@ -30,7 +30,10 @@ export default function Layout() {
             to="/"
             end
             className={({ isActive }) =>
-              `px-3 py-2 rounded block ${isActive ? "font-semibold" : ""}`
+              `px-3 py-2 rounded block hover:bg-white/10  focus-visible:outline-none
+              focus-visible:ring-2 focus-visible:ring-white/60 ${
+                isActive ? "font-semibold" : ""
+              }`
             }
           >
             Dashboard
@@ -39,7 +42,10 @@ export default function Layout() {
           <NavLink
             to="/users"
             className={({ isActive }) =>
-              `px-3 py-2 rounded block ${isActive ? "font-semibold" : ""}`
+              `px-3 py-2 rounded block hover:bg-white/10  focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-white/60 ${
+                  isActive ? "font-semibold" : ""
+                }`
             }
           >
             Users
@@ -48,7 +54,10 @@ export default function Layout() {
           <NavLink
             to="/settings"
             className={({ isActive }) =>
-              `px-3 py-2 rounded block ${isActive ? "font-semibold" : ""}`
+              `px-3 py-2 rounded block hover:bg-white/10  focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-white/60 ${
+                  isActive ? "font-semibold" : ""
+                }`
             }
           >
             Settings
