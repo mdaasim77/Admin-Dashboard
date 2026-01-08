@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
-  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex bg-gray-100">
